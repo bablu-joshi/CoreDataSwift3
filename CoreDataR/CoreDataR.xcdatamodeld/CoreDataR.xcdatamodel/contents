@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Course" representedClassName="Course" syncable="YES">
+        <attribute name="bookname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fees" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startDate" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="person" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Person" inverseName="course" inverseEntity="Person" syncable="YES"/>
+    </entity>
+    <entity name="Person" representedClassName="Person" syncable="YES">
+        <attribute name="cellno" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="course" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Course" inverseName="person" inverseEntity="Course" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Course" positionX="-11" positionY="-306" width="128" height="120"/>
+        <element name="Person" positionX="-423" positionY="-297" width="128" height="90"/>
+    </elements>
+</model>
